@@ -142,15 +142,96 @@ items = [
         "category":["Dairy and Eggs"],
         "available":35,
         "price":5.57,
-    }
+    },
     {
-        "id":16,
+        "id":17,
         "name":"pound ground beef",
         "sold-in":"500g pack",
         "aisle":10,
         "category":["Meat"],
         "available":35,
         "price":10.57,
+    },
+     {
+        "id":18,
+        "name":"white sugar",
+        "sold-in":"500g pack",
+        "aisle":7,
+        "category":["pantry"],
+        "available":45,
+        "price":5.57,
+    },
+     {
+        "id":19,
+        "name":"mushrooms",
+        "sold-in":"500g pack",
+        "aisle":11,
+        "category":["Vegetables"],
+        "available":35,
+        "price":8.57,
+    },
+     {
+        "id":20,
+        "name":"onions ",
+        "sold-in":"lb",
+        "aisle":10,
+        "category":["Vegetables"],
+        "available":35,
+        "price":1.57,
+    },
+     {
+        "id":21,
+        "name":"baking soda ",
+        "sold-in":"500g pack",
+        "aisle":4,
+        "category":["Pantry"],
+        "available":28,
+        "price":6.57,
+    },
+     {
+        "id":22,
+        "name":"Romano cheese ",
+        "sold-in":"1b",
+        "aisle":4,
+        "category":["Dairy and Eggs"],
+        "available":28,
+        "price":2.67,
+    },
+      {
+        "id":23,
+        "name":"basil ",
+        "sold-in":"50g per bottle",
+        "aisle":7,
+        "category":["Pantry"],
+        "available":7,
+        "price":4,44,
+    },
+     {
+        "id":24,
+        "name":"oregano ",
+        "sold-in":"50g per bottle",
+        "aisle":7,
+        "category":["Pantry"],
+        "available":6,
+        "price":3.44,
+    },
+      {
+        "id":25,
+        "name":"garlic ",
+        "sold-in":"3 per bag",
+        "aisle":5,
+        "category":["Vegetables"],
+        "available":10,
+        "price":5,84,
+    },
+     {
+        "id":26,
+        "name":"tomato  ",
+        "sold-in":"1lb",
+        "aisle":5,
+        "category":["Vegetables"],
+        "available":10,
+        "price":1,24,
     }
 ]
 
@@ -159,7 +240,7 @@ recipies =[
         "id"    :  1,
         "name"  :   "egg fry rice",
         "Ingredients"   :   ["8", "9", "10", "5","11"],
-        'qty' :   [1,1,1,1],
+        'qty' :   [1,1,1,1,1],
         "steps" :   ['Bring water, soy sauce, and salt to a boil in a medium saucepan.', 'Stir in rice and remove from heat.',
         'Cover and let stand for 5 minutes.', 'Heat oil in a medium skillet or wok over medium heat.',
         'Sauté onions and green beans in hot oil for 2 to 3 minutes.',
@@ -168,10 +249,11 @@ recipies =[
     },
       {
         "id"    :  2,
-        "name"  :   "",
-        "Ingredients"   :   ["8", "9", "10", "5","11"],
-        'qty' :   [1,1,1,1],
-        "steps" :   ['']
+        "name"  :   "Spaghetti Sauce with Ground Beef",
+        "Ingredients"   :   ["6","17","18","23","24", "25","26"],
+        'qty' :   [1,1,3,3,1,1,2],
+        "steps" :   ['Brown your hamburger in a large pan.','Once cooked, throw in salt, pepper, tomato sauce and paste, water (with the bouillon cubes in it), sugar, basil, oregano and garlic. Simmer on low for an hour.'
+                    ,'A few minutes before the hour is done, cook box of spaghetti noodles as directed on package','Once the noodles are cooked, drain and add to spaghetti sauce. ENJOY!']
     }
 
 ]
