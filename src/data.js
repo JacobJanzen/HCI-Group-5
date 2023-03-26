@@ -143,6 +143,15 @@ items = [
         "available":35,
         "price":5.57,
     }
+    {
+        "id":16,
+        "name":"pound ground beef",
+        "sold-in":"500g pack",
+        "aisle":10,
+        "category":["Meat"],
+        "available":35,
+        "price":10.57,
+    }
 ]
 
 recipies =[
