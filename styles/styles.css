@@ -87,7 +87,7 @@ padding-left: .5rem;
  .contentBody{
     display: flex;
     width: 100vw;
-    height: 55vh;
+    max-height: 65vh;
     justify-content:flex-start;
     align-items: center;
     margin-top: 3%;
@@ -98,9 +98,9 @@ padding-left: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    min-height: 350px;
     border-radius: 0 .5rem .5rem 0;
-    padding: 1rem;
+    padding: 1rem .5rem;
     background-color: var(--base-color);
     box-shadow: 0 5px 10px rgba(0,0,0,.3);
     border-top: none;
@@ -108,7 +108,8 @@ padding-left: .5rem;
 
 .side-menu-item{
     display: flex;
-    width: 110%;
+    width: 100%;
+    padding: .1rem 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -118,14 +119,14 @@ padding-left: .5rem;
     transition: .25s ease-in;
     padding: 1%;
 }
-.side-menu-item:hover{
+.side-menu-item:hover, .selected-menu-item{
     filter: invert(100);
     background-color: var(--base-color);
 }
 
 #main{
     display: flex;
-    max-width: 805px;
+    max-width: 80vw;
     max-height: 100%;
     flex-flow: wrap;
     background-color: var(--base-color);
@@ -138,7 +139,7 @@ padding-left: .5rem;
 
 
 /********scroll bar *******/
-::-webkit-scrollbar{width: 15px;}
+::-webkit-scrollbar{width: .8rem;}
 
 ::-webkit-scrollbar-track{
     border-radius: 0 1rem 1rem 0;
@@ -151,4 +152,22 @@ padding-left: .5rem;
     box-shadow: inset rgba(37, 37, 37, 0.804) 0 0 5px;
 }
 
+/********scroll bar ends *******/
 
+
+.categoryItem{
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+    max-width: 300px;
+    flex-flow: column;
+    cursor: pointer;
+    transition: all .4s;
+    font-size: x-large;
+    outline: 1px solid rgba(128, 128, 128, 0.158);
+}
+
+.categoryItem:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color : rgb(73, 82, 92);
+}

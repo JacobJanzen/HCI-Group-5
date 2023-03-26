@@ -49,13 +49,15 @@ function createFront(imgsrc,name,price, unit){
     const img = createElem('img')
     const title = createElem('h3')
     const priceTag = createElem('p',['itemPrice'])
+    const soldin = createElem('p',['soldIn'])
 
     img.src = imgsrc
     title.innerHTML = name
-    priceTag.innerHTML = '$'+price.toFixed(2) + "/" + unit
+    priceTag.innerHTML = '$'+price.toFixed(2)
+    soldin.innerText = `/${unit}`
 
     front.title = 'click me!'
-    front.append(img,title,priceTag)
+    front.append(img,title,priceTag, soldin )
     return front;
 }
 

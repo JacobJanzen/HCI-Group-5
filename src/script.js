@@ -129,13 +129,13 @@ function checkout() {
     main.innerHTML = `
     <form class="checkout-form">
       <div class="section">
-        <label>First Name <input id="first-name" type="text" required class="checkout-input"/></label>
-        <label>Last Name <input id="last-name" name="last-name" type="text" required class="checkout-input"/></label>
-        <label>Email <input id="email" name="email" type="email" required class="checkout-input"/></label>
-        <label>Address <input id="address" placeholder="Include apt, suite, or floor number here" type="text" required class="checkout-input"/>
-        <input id="city" placeholder="City" type="text" required class="checkout-input"/></label>
+        <span><input id="first-name" type="text" required class="checkout-input" placeholder="First Name"/> 
+        <input id="last-name" name="last-name" type="text" required class="checkout-input" placeholder="Last Name"/></span>
+        <input id="email" name="email" type="email" required class="checkout-input" placeholder="Email (johnDoe123@domain.com"/>
+        <input id="address" placeholder="Address Include:(apt, suite, or floor number here)" type="text" required class="checkout-input"/>
+        <span><input id="city" placeholder="City" type="text" required class="checkout-input"/>
         <select id="province" class="checkout-input">
-            <option value>Province</option>
+            <option value selected disabled>Province</option>
             <option value="AB">Alberta</option>
             <option value="BC">British Columbia</option>
             <option value="MB">Manitoba</option>
@@ -149,36 +149,31 @@ function checkout() {
             <option value="QC">Quebec</option>
             <option value="SK">Saskatchewan</option>
             <option value="YT">Yukon Territory</option>
-          </select>
-      </div>
-      <div class="section">
-        <label>Credit card number <input id="credit card" type="text" required class="checkout-input"/></label>
-        <label>Expiry (MM / YY) <input id="expiry" type="text" required class="checkout-input"/></label>
-        <label>Security code <input id="security" type="text" required class="checkout-input"/></label>
-        <label>Name on card<input id="name-on-card" type="text" required class="checkout-input"/></label>
-        <div class="billing">
+          </select> </span>
+
+        <br>
+
+        <input id="credit card" type="text" required class="checkout-input" placeholder="Credit Card Number"/>
+        <input id="name-on-card" type="text" required class="checkout-input" placeholder="Name on Card"/>
+        <span><input id="expiry" type="text" required class="checkout-input" placeholder="Expiry: MM/YY"/>
+        <input id="security" type="text" required class="checkout-input" placeholder="Security Code"/></span>
+        
+        <br>
           <div class="billing-address">Billing address</div>
           <div>
             <input class="checkbox" id="billing-address" type="checkbox" required class="checkout-input"/> 
             <label class="checkbox" for="billing-address">Same as shipping</label>
           </div>
-        </div>
       </div>
+      <div class="lineBreak"></div>
       <div class="section">
         <div class="order-summary">
-           <div class="line-label">Subtotal</div>
-           <div class="line-label2">$${global_subtotal.toFixed(2)}</div>
-           </div>
-        <div class="order-summary">
-          <div class="taxlabel">Tax</div>
-          <div class="taxlabel2">$${global_tax.toFixed(2)}</div>
+           <p class="SubTotal"><b>Subtotal:</b> &nbsp; $${global_subtotal.toFixed(2)}</p>
+          <p class="taxlabel"><b>Tax:</b> &nbsp; $${global_tax.toFixed(2)}</p>
+          <p class="total-label"><b>Total: &nbsp; $${global_total.toFixed(2)}</b></p>
           </div>
-        <div class="total">
-          <div class="total-label">Total</div>
-          <div class="total-label2">$${global_total.toFixed(2)}</div>
-          </div>
+          <input type="submit" value="Place Order" class="checkout-submit"/>
       </div>
-      <input type="submit" value="Place Order" class="checkout-submit"/>
     </form>
     `
 
@@ -191,7 +186,7 @@ function showCategories() {
     main.setAttribute("id", "main")
 
     categories.forEach(category => {
-        const newDiv = document.createElement("div")
+        const newDiv = createElem("div",['categoryItem'])
         const img = document.createElement("img")
         img.setAttribute("src", `images/cat/${category.toLowerCase()}.png`)
         const categoryTitle = document.createElement("H3")
@@ -244,57 +239,6 @@ function resetSearch(){
     searchBar.placeholder = 'Search' // set default
 }
 
-function updateCart() {
-    const cartContainer = document.createElement("div")
-    cartContainer.setAttribute("class", "cart-container")
-    cartContainer.setAttribute("id", "cart-container")
 
-    const totals = document.createElement("div")
-    totals.setAttribute("id", "totals")
-
-    let subtotal = 0
-
-    Object.keys(cart).forEach((k) => {
-        const price = cart[k].num * cart[k].item.price
-        subtotal += price
-        cartContainer.appendChild(createCartItem(k,price))
-    })
-
-    const subtotalNode = document.createElement("p")
-    const subtotalText = document.createTextNode("Subtotal: $" + subtotal.toFixed(2))
-    subtotalNode.appendChild(subtotalText)
-    totals.appendChild(subtotalNode)
-    global_subtotal = subtotal
-
-    const taxNode = document.createElement("p")
-    const taxText = document.createTextNode("Tax: $" + (subtotal * 0.12).toFixed(2))
-    taxNode.appendChild(taxText)
-    totals.appendChild(taxNode)
-    global_tax = subtotal * 0.12
-
-    const totalNode = document.createElement("p")
-    const totalText = document.createTextNode("Total: $" + (subtotal * 1.12).toFixed(2))
-    totalNode.appendChild(totalText)
-    totals.appendChild(totalNode)
-    global_total = subtotal * 1.12
-
-    document.getElementById("cart-container").replaceWith(cartContainer)
-    document.getElementById("totals").replaceWith(totals)
-
-    //adjust bottom
-    cartBottomAdjust()
-}
-
-function cartBottomAdjust(){
-    const cart = document.querySelector(".cart");
-    const adjustment = document.querySelector(".cart-container").clientHeight + 
-    document.querySelector(".payment").clientHeight + 
-    document.querySelector("#totals").clientHeight;
-
-    if( !cart.classList.contains('cartActive'))
-        cart.style.bottom = `${(adjustment *-1)-9}px`
-    else
-        cart.style.bottom = 0
-}
 
 window.addEventListener("load", init)
