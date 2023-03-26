@@ -150,12 +150,19 @@ recipies =[
         "id"    :  1,
         "name"  :   "egg fry rice",
         "Ingredients"   :   ["8", "9", "10", "5","11"],
-        'qty' :   [null,null,null,null],
+        'qty' :   [1,1,1,1],
         "steps" :   ['Bring water, soy sauce, and salt to a boil in a medium saucepan.', 'Stir in rice and remove from heat.',
         'Cover and let stand for 5 minutes.', 'Heat oil in a medium skillet or wok over medium heat.',
         'Sauté onions and green beans in hot oil for 2 to 3 minutes.',
         'Pour in beaten egg and fry for 2 minutes, scrambling egg while it cooks.','Add cooked rice to egg mixture',
         'mix well. Season with pepper.']
+    },
+      {
+        "id"    :  2,
+        "name"  :   "",
+        "Ingredients"   :   ["8", "9", "10", "5","11"],
+        'qty' :   [1,1,1,1],
+        "steps" :   ['']
     }
 
 ]
