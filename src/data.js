@@ -149,7 +149,7 @@ recipies =[
          {
         "id"    :  1,
         "name"  :   "egg fry rice",
-        "Ingredients"   :   ["egg", "salt", "green onion", "rice"," soy sauce"],
+        "Ingredients"   :   ["8", "9", "10", "5","11"],
         'qty' :   [null,null,null,null],
         "steps" :   ['Bring water, soy sauce, and salt to a boil in a medium saucepan.', 'Stir in rice and remove from heat.',
         'Cover and let stand for 5 minutes.', 'Heat oil in a medium skillet or wok over medium heat.',
