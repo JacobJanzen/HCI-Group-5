@@ -3,6 +3,11 @@ function init() {
     updateSearchType()
     cartBottomAdjust()
 
+    document.getElementById("to-checkout").addEventListener("click", () => {
+        resetSearch()
+        checkout()
+    })
+
     document.getElementById("products-menu-item").addEventListener("click", () => {
         resetSearch()
         backToProducts()
@@ -117,6 +122,69 @@ function deals() {
     document.getElementById("main").replaceWith(main)
 }
 
+function checkout() {
+    const main = document.createElement("div")
+    main.setAttribute("class", "checkout-body")
+    main.setAttribute("id", "main")
+    main.innerHTML = `
+    <form class="checkout-form">
+      <div class="section">
+        <label>First Name <input id="first-name" type="text" required class="checkout-input"/></label>
+        <label>Last Name <input id="last-name" name="last-name" type="text" required class="checkout-input"/></label>
+        <label>Email <input id="email" name="email" type="email" required class="checkout-input"/></label>
+        <label>Address <input id="address" placeholder="Include apt, suite, or floor number here" type="text" required class="checkout-input"/>
+        <input id="city" placeholder="City" type="text" required class="checkout-input"/></label>
+        <select id="province" class="checkout-input">
+            <option value>Province</option>
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="NU">Nunavut</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="YT">Yukon Territory</option>
+          </select>
+      </div>
+      <div class="section">
+        <label>Credit card number <input id="credit card" type="text" required class="checkout-input"/></label>
+        <label>Expiry (MM / YY) <input id="expiry" type="text" required class="checkout-input"/></label>
+        <label>Security code <input id="security" type="text" required class="checkout-input"/></label>
+        <label>Name on card<input id="name-on-card" type="text" required class="checkout-input"/></label>
+        <div class="billing">
+          <div class="billing-address">Billing address</div>
+          <div>
+            <input class="checkbox" id="billing-address" type="checkbox" required class="checkout-input"/> 
+            <label class="checkbox" for="billing-address">Same as shipping</label>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="order-summary">
+           <div class="line-label">Subtotal</div>
+           <div class="line-label2">$${global_subtotal.toFixed(2)}</div>
+           </div>
+        <div class="order-summary">
+          <div class="taxlabel">Tax</div>
+          <div class="taxlabel2">$${global_tax.toFixed(2)}</div>
+          </div>
+        <div class="total">
+          <div class="total-label">Total</div>
+          <div class="total-label2">$${global_total.toFixed(2)}</div>
+          </div>
+      </div>
+      <input type="submit" value="Place Order" class="checkout-submit"/>
+    </form>
+    `
+
+    document.getElementById("main").replaceWith(main)
+}
+
 function showCategories() {
     const main = document.createElement("div")
     main.setAttribute("class", "center")
@@ -196,16 +264,19 @@ function updateCart() {
     const subtotalText = document.createTextNode("Subtotal: $" + subtotal.toFixed(2))
     subtotalNode.appendChild(subtotalText)
     totals.appendChild(subtotalNode)
+    global_subtotal = subtotal
 
     const taxNode = document.createElement("p")
     const taxText = document.createTextNode("Tax: $" + (subtotal * 0.12).toFixed(2))
     taxNode.appendChild(taxText)
     totals.appendChild(taxNode)
+    global_tax = subtotal * 0.12
 
     const totalNode = document.createElement("p")
     const totalText = document.createTextNode("Total: $" + (subtotal * 1.12).toFixed(2))
     totalNode.appendChild(totalText)
     totals.appendChild(totalNode)
+    global_total = subtotal * 1.12
 
     document.getElementById("cart-container").replaceWith(cartContainer)
     document.getElementById("totals").replaceWith(totals)

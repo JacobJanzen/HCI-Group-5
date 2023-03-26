@@ -204,7 +204,7 @@ items = [
         "aisle":7,
         "category":["Pantry"],
         "available":7,
-        "price":4,44,
+        "price":4.44,
     },
      {
         "id":24,
@@ -222,7 +222,7 @@ items = [
         "aisle":5,
         "category":["Vegetables"],
         "available":10,
-        "price":5,84,
+        "price":5.84,
     },
      {
         "id":26,
@@ -231,7 +231,7 @@ items = [
         "aisle":5,
         "category":["Vegetables"],
         "available":10,
-        "price":1,24,
+        "price":1.24,
     }
 ]
 
@@ -264,3 +264,7 @@ categories = [
 
 cart = {
 }
+
+global_subtotal = 0
+global_tax = 0
+global_total = 0
