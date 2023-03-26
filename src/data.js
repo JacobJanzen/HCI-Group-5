@@ -29,7 +29,7 @@ items = [
     {
         "id"    : 4,
         "name"  : "Cilantro",
-        "sold-in"   : "bunches",
+        "sold-in"   : "bunch",
         "aisle" :   1,
         "category"  : ["Vegetables", "Herbs"],
         "available" : 45,
@@ -128,7 +128,7 @@ items = [
     {
         "id":15,
         "name":"Chicken",
-        "sold-in":"1 Whole Chicken",
+        "sold-in":"1 Whole",
         "aisle":7,
         "category":["Meat"],
         "available":25,

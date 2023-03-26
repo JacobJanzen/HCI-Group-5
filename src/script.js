@@ -216,12 +216,12 @@ function updateCart() {
 
 function cartBottomAdjust(){
     const cart = document.querySelector(".cart");
-    const adjustment = document.querySelector(".cart-container").scrollHeight + 
-    document.querySelector(".payment").scrollHeight + 
-    document.querySelector("#totals").scrollHeight;
+    const adjustment = document.querySelector(".cart-container").clientHeight + 
+    document.querySelector(".payment").clientHeight + 
+    document.querySelector("#totals").clientHeight;
 
     if( !cart.classList.contains('cartActive'))
-        cart.style.bottom = `${(adjustment *-1)-10}px`
+        cart.style.bottom = `${(adjustment *-1)-9}px`
     else
         cart.style.bottom = 0
 }
