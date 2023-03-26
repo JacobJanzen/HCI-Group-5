@@ -142,7 +142,7 @@ items = [
         "category":["Dairy and Eggs"],
         "available":35,
         "price":5.57,
-    },
+    }
 ]
 
 recipies =[
