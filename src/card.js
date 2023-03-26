@@ -44,7 +44,7 @@ HOW INFO REGARDING THE CARD WILL BE PASSED
 TO THE FUCTION*/
 
 //front of the card
-function createFront(imgsrc,name,price){
+function createFront(imgsrc,name,price, unit){
     const front = createElem('div',['cardFront'])
     const img = createElem('img')
     const title = createElem('h3')
@@ -52,7 +52,7 @@ function createFront(imgsrc,name,price){
 
     img.src = imgsrc
     title.innerHTML = name
-    priceTag.innerHTML = '$'+price.toFixed(2)
+    priceTag.innerHTML = '$'+price.toFixed(2) + "/" + unit
 
     front.title = 'click me!'
     front.append(img,title,priceTag)
@@ -144,7 +144,7 @@ function createCard(item) {
 
     const imgsrc = `images/item/${item.name.toLowerCase()}.png`
 
-    const front=createFront(imgsrc, item.name, item.price) // front of the card
+    const front=createFront(imgsrc, item.name, item.price, item["sold-in"]) // front of the card
     front.setAttribute("id", item.name + "front")
     const back=createBack(item)  //back of the card
     back.setAttribute("id", item.name + "back")
