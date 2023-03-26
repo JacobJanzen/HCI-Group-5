@@ -12,11 +12,12 @@
     max-width: 300px;
     min-width: 275px;
     max-height: 70vh;
+    min-height: 360px;
     transition: 400ms ease;
     border-radius: .5rem .5rem 0rem 0rem;
     background-color:var(--base-color);
     overflow: hidden;
-    
+    z-index: 2;
 }
 
 
@@ -31,7 +32,7 @@
     text-align: center;
     padding: .3rem 0;
     cursor: pointer;
-    font-size: large;
+    font-size: x-large;
     transition: 300ms linear all;
     height: 20%;
 }
@@ -56,12 +57,11 @@
     flex-flow: column;
     padding: 0;
     max-height: 500px;
-    min-height: 200px;
+    min-height: 150px;
     overflow-y: scroll;
     width: 100%;
     align-items: center;
     overflow-y: scroll;
-
 }
 
 #totals {
