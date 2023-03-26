@@ -3,6 +3,11 @@ function init() {
     updateSearchType()
     cartBottomAdjust()
 
+    document.getElementById("recipes-menu-item").addEventListener("click", () => {
+        resetSearch()
+        recipes()
+    })
+
     document.getElementById("to-checkout").addEventListener("click", () => {
         resetSearch()
         checkout()
@@ -117,6 +122,22 @@ function deals() {
 <img src = "./flyerimages/Carrots.png" alt="carrots-deal" onclick="showProduct('carrot')"/>
 <img src = "./flyerimages/Bison.png" alt="bison-deal" onclick="showProduct('bison')"/>
 <img src = "./flyerimages/Apples.png" alt="apples-deal" onclick="showProduct('apple')"/>
+    `
+
+    document.getElementById("main").replaceWith(main)
+}
+
+function recipes() {
+    const main = document.createElement("div")
+    main.setAttribute("class", "center")
+    main.setAttribute("id", "main")
+    main.innerHTML = `
+<h1>Recipes Page Not Implemented</h1>
+<div>
+    <p>Here are some mockups for the page</p>
+    <img src="assets/recipie-page-mockup-01.png" style="aspect-ratio:auto;max-width:70%"/>
+    <img src="assets/recipie-page-mockup-02.png" style="aspect-ratio:auto;max-width:70%"/>
+</div>
     `
 
     document.getElementById("main").replaceWith(main)
