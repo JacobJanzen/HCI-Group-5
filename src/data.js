@@ -78,7 +78,7 @@ items = [
         "aisle":3,
         "category":["Pantry"],
         "available":10,
-        "price":1.27,
+        "price":1.27
     },
     {
         "id":10,
@@ -87,7 +87,7 @@ items = [
         "aisle":1,
         "category":["Vegetables"],
         "available":20,
-        "price":1.47,
+        "price":1.47
     },
     {
         "id":11,
@@ -96,7 +96,7 @@ items = [
         "aisle":3,
         "category":["Pantry"],
         "available":45,
-        "price":3.47,
+        "price":3.47
     },
     {
         "id":12,
@@ -105,7 +105,7 @@ items = [
         "aisle":3,
         "category":["Pantry"],
         "available":66,
-        "price":1.97,
+        "price":1.97
     },
     {
         "id":13,
@@ -114,7 +114,7 @@ items = [
         "aisle":8,
         "category":["Pantry","Grain"],
         "available":70,
-        "price":2.47,
+        "price":2.47
     },
     {
         "id":14,
@@ -123,7 +123,7 @@ items = [
         "aisle":3,
         "category":["Pantry"],
         "available":30,
-        "price":5.47,
+        "price":5.47
     },
     {
         "id":15,
@@ -132,7 +132,7 @@ items = [
         "aisle":7,
         "category":["Meat"],
         "available":25,
-        "price":16.47,
+        "price":16.47
     },
     {
         "id":15,
@@ -141,7 +141,7 @@ items = [
         "aisle":8,
         "category":["Dairy and Eggs"],
         "available":35,
-        "price":5.57,
+        "price":5.57
     },
     {
         "id":17,
@@ -150,7 +150,7 @@ items = [
         "aisle":10,
         "category":["Meat"],
         "available":35,
-        "price":10.57,
+        "price":10.57
     },
      {
         "id":18,
@@ -159,7 +159,7 @@ items = [
         "aisle":7,
         "category":["Pantry"],
         "available":45,
-        "price":5.57,
+        "price":5.57
     },
      {
         "id":19,
@@ -168,7 +168,7 @@ items = [
         "aisle":11,
         "category":["Vegetables"],
         "available":35,
-        "price":8.57,
+        "price":8.57
     },
      {
         "id":20,
@@ -177,7 +177,7 @@ items = [
         "aisle":10,
         "category":["Vegetables"],
         "available":35,
-        "price":1.57,
+        "price":1.57
     },
     {
         "id":23,
@@ -186,7 +186,7 @@ items = [
         "aisle":7,
         "category":["Herbs"],
         "available":7,
-        "price":4.44,
+        "price":4.44
     },
     {
         "id":25,
@@ -195,7 +195,7 @@ items = [
         "aisle":5,
         "category":["Vegetables"],
         "available":10,
-        "price":5.84,
+        "price":5.84
     },
     {
         "id":26,
@@ -204,7 +204,16 @@ items = [
         "aisle":5,
         "category":["Vegetables"],
         "available":10,
-        "price":1.24,
+        "price":1.24
+    },
+    {
+        "id":27,
+        "name":"Feta Cheese",
+        "sold-in":"block",
+        "aisle":8,
+        "category":["Dairy and Eggs"],
+        "available":25,
+        "price":4.27
     }
 ]
 
