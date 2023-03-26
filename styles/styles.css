@@ -1,5 +1,7 @@
 :root{
     --base-color :  rgb(238, 240, 236);
+    --card-base-color : rgb(226, 232, 238);
+    --red-hover-color : rgb(226, 102, 88);
 }
 
 
@@ -133,69 +135,6 @@ padding-left: .5rem;
     gap: 1rem;
     border-radius: 1rem;
 }
-
-
-/******** cart stuff begins ********/
-.cart{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: center;
-
-    margin-right: 1rem;
-    bottom: -18%;
-    right: 0;
-    width: 30%;
-    max-width: 300px;
-    min-width: 250px;
-    max-height: 70vh;
-    transition: 400ms ease;
-    border-radius: .5rem .5rem 0rem 0rem;
-    background-color: var(--base-color);
-    overflow: hidden;
-    
-}
-
-
-.cartActive{
-    box-shadow: rgba(0, 0, 0, 0.2) -5px -10px 5px;
-}
-
-
-.cart-button, .payment{
-    background-color: green;
-    color: white;
-    text-align: center;
-    padding: .3rem 0;
-    cursor: pointer;
-    font-size: large;
-    transition: 300ms linear all;
-    height: 20%;
-}
-
-
-.cart-button:hover, .payment:hover{
-    background-color: rgb(18, 119, 18);
-    box-shadow: inset limegreen 0 0 20px;
-}
-
-.payment{
-    width:90%;
-    align-self: center;
-    margin-bottom: .5rem;
-    border-radius: .7rem;
-    box-sizing: border-box;
-    border : .1rem solid rgb(1, 90, 1)
-}
-
-
-.cart-container{
-    max-height: 500px;
-    min-height: 350px;
-    overflow-y: scroll;
-}
-
-/******** cart stuff ends ********/
 
 
 /********scroll bar *******/

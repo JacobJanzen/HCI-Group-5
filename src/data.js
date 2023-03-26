@@ -24,7 +24,7 @@ items = [
         "aisle" :   1,
         "category"  : ["Vegetables"],
         "available" : 105,
-        "price" : 3.50
+        "price" : 3.050
     },
     {
         "id"    : 4,
@@ -68,8 +68,8 @@ items = [
         "sold-in":"12 count",
         "aisle":8,
         "category":["Dairy and Eggs"],
-        "availabe":100,
-        "price":3.59,
+        "available":54,
+        "price":3.59
     },
     {
         "id":9,
@@ -97,6 +97,51 @@ items = [
         "category":["Pantry"],
         "available":45,
         "price":3.47,
+    },
+    {
+        "id":12,
+        "name":"Black Pepper",
+        "sold-in":"85g bag",
+        "aisle":3,
+        "category":["Pantry"],
+        "available":66,
+        "price":1.97,
+    },
+    {
+        "id":13,
+        "name":"Bread",
+        "sold-in":"675g bag",
+        "aisle":8,
+        "category":["Pantry","Grain"],
+        "available":70,
+        "price":2.47,
+    },
+    {
+        "id":14,
+        "name":"Mayonnaise",
+        "sold-in":"890ml bottle",
+        "aisle":3,
+        "category":["Pantry"],
+        "available":30,
+        "price":5.47,
+    },
+    {
+        "id":15,
+        "name":"Chicken",
+        "sold-in":"1 Whole Chicken",
+        "aisle":7,
+        "category":["Meat"],
+        "available":25,
+        "price":16.47,
+    },
+    {
+        "id":15,
+        "name":"Milk",
+        "sold-in":"4L bottle",
+        "aisle":8,
+        "category":["Dairy and Eggs"],
+        "available":35,
+        "price":5.57,
     },
 ]
 

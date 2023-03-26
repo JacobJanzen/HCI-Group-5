@@ -126,6 +126,7 @@ function createBack(item){
             delete cart[item.name]
         } else {
             cart[item.name] = {item,num}
+            document.getElementById(item.name + "input").value = 1
         }
         updateCart()
     })

@@ -135,7 +135,7 @@
     text-align: center;
     width: 30%;
     cursor: pointer;
-    transition: 50ms ease;
+    transition: 150ms ease;
 }
 
 .dec
@@ -145,8 +145,8 @@
     {background-color: green;
     border-radius: 0rem 1rem 1rem 0rem;}
 
-.dec:hover{background-color: rgb(230, 95, 95);}
-.inc:hover{background-color: rgb(152, 196, 132);}
+.dec:hover{background-color: var(--red-hover-color);}
+.inc:hover{background-color: rgb(131, 190, 104);}
 
 
 .qtyControl{
