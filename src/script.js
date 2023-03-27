@@ -42,6 +42,7 @@ function init() {
     })
 
     updateProductList("",'all',items)
+    firstLoad = false
 }
 
 

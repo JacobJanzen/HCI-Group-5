@@ -1,3 +1,5 @@
+let firstLoad = true;
+
 function createElem(typ = 'div', classes = []) {
     elmnt = document.createElement(typ)
     for (clss of classes)
@@ -155,5 +157,8 @@ function createCard(item) {
 
     addFunk(crd)
     cont.appendChild(crd)
+    if (firstLoad){
+        cont.style.animationName = 'cardIntro';
+        }
     return cont
 }
